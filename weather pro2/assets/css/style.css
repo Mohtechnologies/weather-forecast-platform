@@ -1,0 +1,111 @@
+/* Simple, modern dark theme layout inspired by your mockup */
+:root {
+  --bg: #05060b;
+  --card: #0f1330;
+  --muted: #9aa0c7;
+  --accent: #5b55ff;
+  --glass: rgba(255,255,255,0.03);
+  --radius: 14px;
+  --container: 1100px;
+}
+
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: linear-gradient(180deg,#030315 0%, #071431 100%); color:#fff; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.container { max-width: var(--container); margin: 28px auto; padding: 0 20px; }
+
+/* Topbar */
+.topbar { background: transparent; padding: 18px 0; }
+.topbar-inner { display:flex; justify-content:space-between; align-items:center; }
+.brand { font-weight:700; letter-spacing:0.6px;  display: flex; flex-direction: row;}
+.actions { display:flex; gap:12px; align-items:center; }
+.logo{ width: 100px;}
+
+/* Auth page */
+.auth-page { min-height: calc(100vh - 40px); display:flex; align-items:center; justify-content:center; padding: 20px; }
+.auth-card { width: 380px; padding: 28px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius: var(--radius); box-shadow: 0 10px 30px rgba(3,6,18,0.6); text-align:left; }
+.auth-card h1 { margin:0 0 6px; font-size:20px; }
+.muted { color:var(--muted); text-align: center; }
+.small { font-size:13px; margin-top: 10px; }
+.form { margin-top: 16px; display:flex; flex-direction:column; gap:12px; }
+.form label { display:block; font-size:13px; color:var(--muted); }
+.form input { width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.0 4); background: rgba(255,255,255,0.02); color: #fff; outline:none; }
+
+/* Buttons */
+.btn { padding:10px 14px; border-radius:10px; border:0; cursor:pointer; font-weight:600; }
+.btn:hover{ background-color: #bfc0c7;}
+.btn.primary { background: linear-gradient(90deg,var(--accent), #7d6bff); color:#fff; }
+.btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,0.06); color:#fff; }
+.btn.ghost:hover{ background-color: var(--muted); color: var(--bg);}
+
+/* Dashboard */
+.hero { margin: 28px 0; text-align:center; color:#e9eeff; }
+.hero h2 { margin:0 0 12px; font-size:22px; }
+.search-row { display:flex; justify-content:center; gap:8px; margin-top:12px; }
+.search-row input { width:420px; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.04); background: rgba(255,255,255,0.02); color:#fff; }
+.search-row .btn { padding:10px 16px; }
+
+/* cards grid */
+.grid { display:grid; grid-template-columns: 1fr 360px; gap:18px; align-items:start; }
+.card { background: var(--card); padding:18px; border-radius:14px; box-shadow: 0 6px 18px rgba(3,6,18,0.6); }
+
+/* weather card */
+.weather-card .current { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.city { font-size:18px; font-weight:700; }
+.weather-icon { width:60px; height:60px; object-fit:contain; }
+.temp { font-size:36px; font-weight:700; margin-left:6px; }
+.meta-row { display:flex; gap:12px; margin-top:14px; }
+.meta { background: var(--glass); padding:8px 12px; border-radius:10px; color:var(--muted); font-size:13px; }
+
+/* hourly list */
+.forecast-card h3 { margin:0 0 8px 0; }
+.hourly-list { display:flex; flex-direction:column; gap:8px; max-height:320px; overflow:auto; padding-right:4px; }
+.hour-item { display:flex; justify-content:space-between; align-items:center; padding:8px; border-radius:10px; background: rgba(255,255,255,0.01); }
+.hour-item .time { font-size:13px; color:var(--muted); }
+.hour-item .t { font-weight:700; }
+
+.create-account-title{ text-align: center;}
+
+.index-title{text-align: center;}
+
+.index-tagline{text-align: center; margin-bottom: 30px; font-style: italic;}
+
+.error-box {
+  color: #fff;
+  background: #e74c3c;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.6s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
+
+
+/* responsive */
+@media (max-width:980px) {
+  .grid { grid-template-columns: 1fr; }
+  .search-row input { width:60vw; min-width:200px; }
+  .container { padding: 0 16px; }
+}

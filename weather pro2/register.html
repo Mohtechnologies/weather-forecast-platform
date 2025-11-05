@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skymoh — Register</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <div class="card auth-card">
+      <h1 class="create-account-title">Create New Account</h1>
+      <p class="muted" >Register to unlock a smarter weather experience</p>
+
+      <form id="registerForm" class="form">
+        <label>Full name
+          <input type="text" id="regName" required />
+        </label>
+
+        <label>Email
+          <input type="email" id="regEmail" required />
+        </label>
+
+        <label>Password
+          <input type="password" id="regPassword" required minlength="6" />
+        </label>
+
+        <button type="submit" class="btn primary">Create account</button>
+      </form>
+
+      <p class="muted small">
+        Already have an account?
+        <a href="index.html">Sign in</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

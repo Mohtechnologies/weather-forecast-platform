@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skymoh — Login</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <div class="card auth-card">
+      <h1 class="index-title">Skymoh</h1>
+      <p class="index-tagline">Stay Ahead of the Weather</p>
+      <p class="muted">Sign in to access the weather dashboard</p>
+
+      <form id="loginForm" class="form">
+        <label>Email
+          <input type="email" id="loginEmail" required />
+        </label>
+
+        <label>Password
+          <input type="password" id="loginPassword" required />
+        </label>
+
+        <button type="submit" class="btn primary">Sign In</button>
+      </form>
+
+      <p class="muted small">
+        Don't have an account?
+        <a href="register.html">Create one</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
